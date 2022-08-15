@@ -1,33 +1,4 @@
-﻿Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@Xirci 
-Xirci
-/
-Spoti
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-Spoti/Spotify
-@Xirci
-Xirci Create Spotify
-Latest commit 22ea96a 9 dakika önce
- History
- 1 contributor
-1899 lines (1685 sloc)  95.9 KB
-
-param
+﻿param
 (
     [Parameter(HelpMessage = 'Remove podcasts from homepage.')]
     [switch]$podcasts_off,
@@ -384,17 +355,17 @@ function Set-ScriptLanguageStrings {
         }
 
         $langStringsTR = [PSCustomObject]@{
-            Author          = "Spotify Premium Kaçak Yapımcısı:"
-            Author2         = "@Xirci"
-            TranslationBy   = "Discord Adresi:"
-            TranslationBy2  = "Xirci#8337"
-            Incorrect       = "Yanlış Bir Değer Girildi,"
-            Incorrect2      = "Tekrar Giriniz "
-            Download        = "İndirilirken Bir Şeyler Ters Gitti"
-            Download2       = "5 Saniye İçerisinde Bir Daha Denenicek"
-            Download3       = "Tekrar Hata Oluştu Lütfen İçerik Üreticisi İle İletişime Geçiniz"
-            Download4       = "İnternete Bağlımısınız Değilmisiniz Bir Kontrol Edebilirmisiniz"
-            Download5       = "Spotify İndiriliyor"
+            Author          = "Discord:"
+            Author2         = "@Xirci#8337"
+            TranslationBy   = "Tercüman:"
+            TranslationBy2  = "@Xirci"
+            Incorrect       = "Eyvah, yanlış bir değer,"
+            Incorrect2      = "tekrar girin "
+            Download        = "İndirirken hata oluştu"
+            Download2       = "5 saniye içinde tekrar talep edilecek..."
+            Download3       = "Yine hata oluştu"
+            Download4       = "Ağ ayarlarınızı kontrol edin ve kurulumu tekrar çalıştırın"
+            Download5       = "Spotify indiriliyor"
             StopScrpit      = "Komut dosyası durduruldu"
             MsSpoti         = "Spotify'ın desteklenmeyen Microsoft Mağazası sürümü tespit edildi"
             MsSpoti2        = "Spotify Windows Mağazası sürümünü kaldır [Y/N]"
@@ -1926,17 +1897,3 @@ if ($cache_install) {
 if ($start_spoti) { Start-Process -WorkingDirectory $spotifyDirectory -FilePath $spotifyExecutable }
 
 Write-Host ($lang).InstallComplete`n -ForegroundColor Green
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
